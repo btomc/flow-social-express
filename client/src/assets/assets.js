@@ -5,7 +5,7 @@ import sample_profile from './sample_profile.jpg'
 import bgImage from './bgImage.png'
 import group_users from './group_users.png'
 import { Home, MessageCircle, Search, UserIcon, Users } from 'lucide-react'
-import sponsored_img from './sponsored_img.png'
+import sponsored_img from './sponsored_img.jpg'
 import login_1 from './login-1.png'
 import login_2 from './login-2.png'
 
