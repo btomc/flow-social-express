@@ -1,4 +1,6 @@
 import React from 'react'
+import { SignIn } from '@clerk/clerk-react'
+
 import { assets } from '../assets/assets'
 
 const Login = () => {
@@ -33,7 +35,9 @@ const Login = () => {
       </div>
 
       {/* Right side: Login Form */}
-      <div className='flex-1 flex items-center justify-center p-6 sm:p-10'></div>
+      <div className='flex-1 flex items-center justify-center p-6 sm:p-10'>
+        <SignIn />
+      </div>
     </div>
   )
 }

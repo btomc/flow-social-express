@@ -6,8 +6,24 @@
 }
 
 @theme {
-  --color-primary-100: #007f5f;
-  --color-primary-200: #2b9348;
-  --color-secondary: #62bf37;
+  /* --color-primary-100: #007f5f; */
+  --color-primary-100: #cd4074;
+  /* --color-primary-200: #2b9348; */
+  --color-primary-200: #e2467f;
+  --color-primary-200: #dd6691;
+  /* --color-secondary: #62bf37; */
+  --color-secondary: #ff91b9;
   /* --color-secondary: #6bd33b; */
+}
+
+/* clerk btn */
+
+.cl-internal-1od8zdn {
+  background: #cd4074;
+  border-color: #cd4074 !important;
+  outline: none;
+}
+
+.cl-internal-1od8zdn:hover {
+  background: #b53967;
 }
