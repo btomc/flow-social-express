@@ -128,7 +128,7 @@ export const dummyStoriesData = [
       "✨ Something meaningful is on the way. I'm working behind the scenes 🛠️ to bring it all together. This space is just the beginning 🌱. Stay tuned 👀.",
     media_url: '',
     media_type: 'text',
-    background_color: '#007f5f',
+    background_color: '#db2777',
     createdAt: '2025-07-25T08:13:18.111Z',
     updatedAt: '2025-07-25T08:13:18.111Z',
   },
