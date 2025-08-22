@@ -11,10 +11,18 @@ import CreatePost from './pages/CreatePost'
 import Layout from './pages/Layout'
 import { Toaster } from 'react-hot-toast'
 
-import { useUser } from '@clerk/clerk-react'
+import { useUser, useAuth } from '@clerk/clerk-react'
+import { useEffect } from 'react'
 
 const App = () => {
   const { user } = useUser()
+  // const { getToken } = useAuth()
+
+  // useEffect(() => {
+  //   if (user) {
+  //     getToken().then((token) => console.log(token))
+  //   }
+  // }, [user])
 
   return (
     <>
