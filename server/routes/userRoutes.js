@@ -12,6 +12,7 @@ import {
 } from '../controllers/userController.js'
 import { protect } from '../middleware/auth.js'
 import { upload } from '../config/multer.js'
+import { getUserRecentMessages } from '../controllers/messageController.js'
 
 const userRouter = express.Router()
 
@@ -33,5 +34,6 @@ userRouter.post('/accept', protect, sendConnectionRequest)
 userRouter.get('/connections', protect, getUserConnections)
 userRouter.get('/connections', protect, getUserProfiles)
 userRouter.post('/profiles', getUserProfiles)
+userRouter.get('/recent-messages', protect, getUserRecentMessages)
 
 export default userRouter
