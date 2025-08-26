@@ -1,13 +1,47 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import api from '../../api/axios'
 
 const initialState = {
   messages: [],
 }
 
+export const fetchMessages = createAsyncThunk(
+  'messages/fetchMessages',
+  async ({ userId, token }) => {
+    const { data } = await api.post(
+      '/api/message/get',
+      { to_user_id: userId },
+      {
+        headers: {
+          Authorization: `Bearer ${await getToken()}`,
+        },
+      }
+    )
+    return data.success ? data : null
+  }
+)
+
 const messagesSlice = createSlice({
   name: 'messages',
   initialState,
-  reducers: {},
+  reducers: {
+    setMessages: (state, action) => {
+      state.messages = action.payload
+    },
+    addMessage: (state, action) => {
+      state.messages = [...state.messages, action.payload]
+    },
+    resetMessages: (state, action) => {
+      state.messages = []
+    },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchMessages.fulfilled, (state, action) => {
+      if (action.payload) {
+        state.messages = action.payload.messages
+      }
+    })
+  },
 })
 
 export default messagesSlice.reducer
