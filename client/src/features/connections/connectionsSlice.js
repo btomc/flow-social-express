@@ -24,8 +24,8 @@ const connectionsSlice = createSlice({
   name: 'connections',
   initialState,
   reducers: {},
-  extraReducers: () => {
-    builder.addCase(fetchConnections.fulfilled, () => {
+  extraReducers: (builder) => {
+    builder.addCase(fetchConnections.fulfilled, (state, action) => {
       if (action.payload) {
         state.connections = action.payload.connections
         state.pendingConnections = action.payload.pendingConnections
