@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
-import { Toaster } from 'react-hot-toast'
+import toast, { Toaster } from 'react-hot-toast'
 import { useUser, useAuth } from '@clerk/clerk-react'
 import { useDispatch } from 'react-redux'
 
@@ -13,6 +13,7 @@ import Discover from './pages/Discover'
 import Profile from './pages/Profile'
 import CreatePost from './pages/CreatePost'
 import Layout from './pages/Layout'
+import Notification from './components/Notification'
 
 import { fetchUser } from './features/user/userSlice'
 import { fetchConnections } from './features/connections/connectionsSlice'
@@ -52,6 +53,9 @@ const App = () => {
         if (pathnameRef.current === '/messages/' + message.from_user_id._id) {
           dispatch(addMessage(message))
         } else {
+          toast.custom((t) => <Notification t={t} message={message} />, {
+            position: 'bottom-right',
+          })
         }
       }
       return () => {
