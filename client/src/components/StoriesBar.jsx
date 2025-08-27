@@ -1,17 +1,37 @@
+import { useAuth } from '@clerk/clerk-react'
 import React, { useEffect, useState } from 'react'
-import { dummyStoriesData } from '../assets/assets'
 import { Plus } from 'lucide-react'
 import moment from 'moment'
+import toast from 'react-hot-toast'
+
 import StoryModal from './StoryModal'
 import StoryViewer from './StoryViewer'
+import api from '../api/axios'
 
 const StoriesBar = () => {
+  const { getToken } = useAuth()
+
   const [stories, setStories] = useState([])
   const [showModal, setShowModal] = useState(false)
   const [viewStory, setViewStory] = useState(null)
 
   const fetchStories = async () => {
-    setStories(dummyStoriesData)
+    try {
+      const token = await getToken()
+      const { data } = await api.get('/api/story/get', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      if (data.success) {
+        setStories(data.stories)
+      } else {
+        toast(data.message)
+      }
+    } catch (error) {
+      toast.error(error.message)
+    }
   }
 
   useEffect(() => {
