@@ -42,7 +42,7 @@ const ChatBox = () => {
       const formData = new FormData()
       formData.append('to_user_id', userId)
       formData.append('text', text)
-      image && formData.append('ímage', image)
+      image && formData.append('image', image)
 
       const { data } = await api.post('/api/message/send', formData, {
         headers: {
