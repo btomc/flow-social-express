@@ -32,7 +32,7 @@ userRouter.post('/unfollow', protect, unfollowUser)
 userRouter.post('/connect', protect, sendConnectionRequest)
 userRouter.post('/accept', protect, acceptConnectionRequest)
 userRouter.get('/connections', protect, getUserConnections)
-userRouter.get('/connections', protect, getUserProfiles)
+
 userRouter.post('/profiles', getUserProfiles)
 userRouter.get('/recent-messages', protect, getUserRecentMessages)
 

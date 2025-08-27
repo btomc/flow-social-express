@@ -100,6 +100,7 @@ export const getChatMessages = async (req, res) => {
       { seen: true }
     )
 
+    // console.log(messages)
     res.json({ success: true, messages })
   } catch (error) {
     console.log(error)

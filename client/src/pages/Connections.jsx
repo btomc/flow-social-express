@@ -5,7 +5,6 @@ import {
   UserCheck,
   UserRoundPen,
   MessageSquare,
-  CookingPot,
 } from 'lucide-react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
@@ -18,11 +17,11 @@ import api from '../api/axios'
 const Connections = () => {
   const [currentTab, setCurrentTab] = useState('Followers')
   const navigate = useNavigate()
+  const dispatch = useDispatch()
+  const { getToken } = useAuth()
   const { connections, pendingConnections, followers, following } = useSelector(
     (state) => state.connections
   )
-  const dispatch = useDispatch()
-  const { getToken } = useAuth()
 
   const dataArray = [
     { label: 'Followers', value: followers, icon: Users },

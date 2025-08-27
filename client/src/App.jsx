@@ -28,6 +28,7 @@ const App = () => {
         const token = await getToken()
         dispatch(fetchUser(token))
         dispatch(fetchConnections(token))
+        // console.log(token)
       }
     }
     fetchData()

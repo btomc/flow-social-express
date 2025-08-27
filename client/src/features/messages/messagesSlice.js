@@ -7,13 +7,13 @@ const initialState = {
 
 export const fetchMessages = createAsyncThunk(
   'messages/fetchMessages',
-  async ({ userId, token }) => {
+  async ({ token, userId }) => {
     const { data } = await api.post(
       '/api/message/get',
       { to_user_id: userId },
       {
         headers: {
-          Authorization: `Bearer ${await getToken()}`,
+          Authorization: `Bearer ${token}`,
         },
       }
     )
@@ -31,7 +31,7 @@ const messagesSlice = createSlice({
     addMessage: (state, action) => {
       state.messages = [...state.messages, action.payload]
     },
-    resetMessages: (state, action) => {
+    resetMessages: (state) => {
       state.messages = []
     },
   },
@@ -43,5 +43,7 @@ const messagesSlice = createSlice({
     })
   },
 })
+
+export const { setMessages, addMessage, resetMessages } = messagesSlice.actions
 
 export default messagesSlice.reducer

@@ -179,11 +179,11 @@ export const sendConnectionRequest = async (req, res) => {
 
     //  Check if user has sent more than 20 connection requests in the last 24 hours
     const last24Hours = new Date(Date.now() - 24 * 60 * 60 * 1000)
-    const connectionRequest = await Connection.find({
+    const connectionRequests = await Connection.find({
       from_user_id: userId,
       created_at: { $gt: last24Hours },
     })
-    if (connectionRequest.length >= 20) {
+    if (connectionRequests.length >= 20) {
       return res.json({
         success: false,
         message:
@@ -280,7 +280,7 @@ export const acceptConnectionRequest = async (req, res) => {
     user.connections.push(id)
     await user.save()
 
-    const toUser = await User.findById(userId)
+    const toUser = await User.findById(id)
     toUser.connections.push(userId)
     await toUser.save()
 
