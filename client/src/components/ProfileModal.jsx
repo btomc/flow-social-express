@@ -205,7 +205,7 @@ const ProfileModal = ({ setShowEdit }) => {
               </button>
               <button
                 type='submit'
-                className='px-4 py-2 bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition text-white cursor-pointer rounded-lg'
+                className='px-4 py-2 bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition text-white cursor-pointer rounded-lg'
               >
                 Save Changes
               </button>

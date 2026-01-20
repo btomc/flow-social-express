@@ -160,7 +160,7 @@ const ChatBox = () => {
             </label>
             <button
               onClick={sendMessage}
-              className='bg-gradient-to-br from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition text-white cursor-pointer p-2 rounded-full'
+              className='bg-gradient-to-br from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition text-white cursor-pointer p-2 rounded-full'
             >
               <SendHorizonal size={18} />
             </button>

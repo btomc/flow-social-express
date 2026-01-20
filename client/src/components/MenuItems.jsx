@@ -13,7 +13,7 @@ const MenuItems = ({ setSidebarOpen }) => {
           onClick={() => setSidebarOpen(false)}
           className={({ isActive }) =>
             `px-3.5 py-2 flex items-center gap-3 rounded-xl ${
-              isActive ? 'bg-rose-50 text-primary-100' : 'hover:bg-gray-50'
+              isActive ? 'bg-rose-50 text-primary-300' : 'hover:bg-gray-50'
             }`
           }
         >

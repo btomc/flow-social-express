@@ -61,7 +61,7 @@ const StoriesBar = () => {
           <div
             onClick={() => setViewStory(story)}
             key={index}
-            className={`relative rounded-lg shadow min-w-30 max-w-30 max-h-40 cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 actibe:scale-95`}
+            className={`relative rounded-lg shadow min-w-30 max-w-30 max-h-40 cursor-pointer hover:shadow-lg transition-all duration-200 bg-gradient-to-b from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 actibe:scale-95`}
           >
             <img
               src={story.user.profile_picture}

@@ -185,7 +185,7 @@ const StoryModal = ({ setShowModal, fetchStories }) => {
               loading: 'Saving...',
             })
           }
-          className='flex items-center justify-center gap-2 text-white py-3 mt-4 w-full rounded bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition cursor-pointer'
+          className='flex items-center justify-center gap-2 text-white py-3 mt-4 w-full rounded bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition cursor-pointer'
         >
           <Sparkle size={18} /> Create Story
         </button>

@@ -153,7 +153,7 @@ const Connections = () => {
                     {
                       <button
                         onClick={() => navigate(`/profile/${user._id}`)}
-                        className='w-full p-2 text-sm rounded bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition text-white cursor-pointer'
+                        className='w-full p-2 text-sm rounded bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition text-white cursor-pointer'
                       >
                         View Profile
                       </button>

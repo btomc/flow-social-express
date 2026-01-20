@@ -10,25 +10,27 @@
   --color-primary-90: #bc3e6c;
   /* --color-primary-100: #007f5f; */
   --color-primary-100: #cd4074;
+  --color-primary-100: #ffad56;
+  --color-primary-150: #ffa647;
   /* --color-primary-200: #2b9348; */
-  --color-primary-200: #e2467f;
-  --color-primary-200: #dd6691;
+  --color-primary-200: #ff9c32;
+  --color-primary-300: #ff9523;
   /* --color-secondary: #62bf37; */
-  --color-secondary: #ff91b9;
+  --color-secondary: #ffc88e;
   /* --color-secondary: #6bd33b; */
 }
 
 /* clerk btn */
 
-.cl-internal-1od8zdn {
-  background: #cd4074;
-  border-color: #cd4074 !important;
-  outline: none;
+/* .cl-internal-1od8zdn {
+  background: #ffa647;
+  border-color: #ffa647 !important;
+  outline: #ffa647;
 }
 
 .cl-internal-1od8zdn:hover {
-  background: #b53967;
-}
+  background: #ed9940;
+} */
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;

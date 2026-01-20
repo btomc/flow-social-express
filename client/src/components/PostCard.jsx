@@ -100,7 +100,7 @@ const PostCard = ({ post }) => {
             onClick={handleLike}
             className={`w-4 h-4 cursor-pointer ${
               likes.includes(currentUser._id) &&
-              'text-primary-100 fill-primary-90'
+              'text-primary-100 fill-primary-150'
             } `}
           />
           <span>{likes.length}</span>

@@ -34,7 +34,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         <MenuItems setSidebarOpen={setSidebarOpen} />
         <Link
           to='/create-post'
-          className='flex items-center justify-center gap-2 py-2.5 mt-6 mx-6 rounded-lg bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition text-white cursor-pointer'
+          className='flex items-center justify-center gap-2 py-2.5 mt-6 mx-6 rounded-lg bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition text-white cursor-pointer'
         >
           <CirclePlus className='w-5 h-5' />
           Create Post

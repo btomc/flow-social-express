@@ -138,7 +138,7 @@ const CreatePost = () => {
                   error: <p>Post Not Added</p>,
                 })
               }
-              className='text-sm bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-90 hover:to-primary-70 active:scale-95 transition text-white cursor-pointer font-medium px-8 py-2 rounded-md'
+              className='text-sm bg-gradient-to-r from-primary-200 to-primary-100  hover:from-primary-300 hover:to-primary-150 active:scale-95 transition text-white cursor-pointer font-medium px-8 py-2 rounded-md'
             >
               Publish Post
             </button>
